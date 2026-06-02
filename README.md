@@ -13,18 +13,42 @@ Different SMS carriers and registration platforms each have their own Google For
 
 Project Structure
 
-├── app.py                          # Flask web server — routes and entry points
-├── google_form_selenium.py         # Form filler for the main Campaigner (provider) form
-├── google_form_selenium_tcrpy.py   # Form filler for TCR (provider)
-├── google_form_selenium_bulktext.py # Form filler for BulkText (provider) registration
-├── zarkon_brand_registration.py    # Form filler for Zarkon (provider) brand registration
-├── bulktext_brand_registration.py  # Form filler for BulkText (provider) brand registration
-├── xeebi_new_campaign_stage_one.py # Xeebi (provider) campaign registration — Stage 1
-├── xeebi_new_campaign_stage_two.py # Xeebi (provider) campaign registration — Stage 2
-├── OLD_xeebi.py                    # Legacy Xeebi filler (kept for reference)
-├── Dockerfile                      # Container setup with Chrome + virtual display
-├── supervisord.conf                # Process manager — starts Xvfb, VNC, Flask
-├── requirements.txt                # Python dependencies
+├── app.py
+│   Flask web server — routes and entry points
+│
+├── google_form_selenium.py
+│   Form filler for Campaigner (provider)
+│
+├── google_form_selenium_tcrpy.py
+│   Form filler for TCR (provider)
+│
+├── google_form_selenium_bulktext.py
+│   Form filler for BulkText (provider) campaign registration
+│
+├── zarkon_brand_registration.py
+│   Form filler for Zarkon (provider) brand registration
+│
+├── bulktext_brand_registration.py
+│   Form filler for BulkText (provider) brand registration
+│
+├── xeebi_new_campaign_stage_one.py
+│   Xeebi (provider) campaign registration — Stage 1
+│
+├── xeebi_new_campaign_stage_two.py
+│   Xeebi (provider) campaign registration — Stage 2
+│
+├── OLD_xeebi.py
+│   Legacy Xeebi filler (kept for reference)
+│
+├── Dockerfile
+│   Container setup with Chrome + virtual display
+│
+├── supervisord.conf
+│   Process manager — starts Xvfb, VNC, Flask
+│
+├── requirements.txt
+│   Python dependencies
+│
 └── .gitignore
 
 Prerequisites
