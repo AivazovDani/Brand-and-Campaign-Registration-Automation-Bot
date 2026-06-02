@@ -12,7 +12,7 @@ Different SMS carriers and registration platforms each have their own Google For
 4. Filling all fields, selecting dropdowns/checkboxes/radio buttons, and waiting for manual review before submission
 
 Project Structure
-
+```
 ├── app.py
 │   Flask web server — routes and entry points
 │
@@ -50,7 +50,7 @@ Project Structure
 │   Python dependencies
 │
 └── .gitignore
-
+```
 Prerequisites
 
 - Python 3.11+
@@ -115,7 +115,7 @@ Airtable Structure
 The app expects two tables in your Airtable base:
 
 Brands table design in Airtable:
-
+```
 | Field | Description |
 | Name | Brand name (used to look up records) |
 | Name (from Entity) | Legal company name |
@@ -131,14 +131,21 @@ Brands table design in Airtable:
 | Entity Name | Entity/LLC name |
 | Entity name | (variant field used in some forms) |
 
+
+```
 Registration table design in Airtable:
 
+```
 | Field | Description |
 | Name | Identifier (matched against brand name) |
 | Registered copies | Sample SMS messages |
 
+
+```
 Flask Routes:
 
+
+```
 | Route | Method | Script | Description |
 | / | GET | — | Home page |
 | /run | POST | `google_form_selenium.py | Main campaigner form |
@@ -154,7 +161,7 @@ Flask Routes:
 | /run-reve-tfn | POST | n8n webhook | Reve TFN via n8n |
 | /run-deliveryhub | POST | n8n webhook | DeliveryHub via n8n |
 | /run-bindtfn | POST | n8n webhook | Bind TFN via n8n |
-
+```
 
 How the Form Filling Works:
 
@@ -170,11 +177,11 @@ Each script follows the this pattern:
 
 
 Environment Variables:
-
+```
 | Variable | Required | Description |
 | AIRTABLE_API_KEY | Yes | Your Airtable personal access token |
 | AIRTABLE_BASE_ID | Yes | The ID of your Airtable base |
-
+```
 
 
 Notes:
